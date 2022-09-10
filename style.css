@@ -1,0 +1,136 @@
+body{
+    text-align: center;   
+    padding: 40vh 10vw;
+    overflow-y:hidden;
+    background: #4CA1AF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button{
+    margin: 10px;
+}
+
+.roulette{
+    font-family: "Courier New", Courier, monospace !important;
+    color: white !important;
+    font-size: 4rem;
+}
+
+.form{
+    width: 40vw;
+    height: auto;
+}
+
+.btn{
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+button{
+    font-family: "Courier New", Courier, monospace !important;
+    font-weight:bold;
+    width: 5rem;
+    height: 2rem;
+    background: transparent;
+    border: solid;
+    border-color: white !important;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background: black;  /* fallback for old browsers */
+    color: white;
+    border: solid;
+    border-color: black !important;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    font-weight:bold;
+  }
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+  a {
+    color: white;  
+    text-decoration: none;
+  }
+  a:hover{
+    font-weight: bold;
+  }  
+.tagify{
+    border-radius: 4px !important;
+    border-width: 3px !important;
+    font-family: "Courier New", Courier, monospace !important;
+}
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20vw; /* Could be more or less, depending on screen size */
+    border-radius: 0 20px 0 20px;
+    font-family: "Courier New", Courier, monospace !important;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
+  
+.vibrate{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
