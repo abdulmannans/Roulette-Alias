@@ -1,46 +1,47 @@
-$(function(){
+$(function () {
     $("#names").tagify({
-            duplicates : false
+        duplicates: false
     });
 
-    $("#spinMe").on("click", function(){
+    $("#spinMe").on("click", function () {
         let names = $("#names").val()
-        if(names == null || names ==  undefined || names.length == 0){
+        if (names == null || names == undefined || names.length == 0) {
             $('.tagify').addClass("vibrate");
             $('.tagify').css("border-color", "red");
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.tagify').css("border-color", "white");
-                $('.tagify').removeClass("vibrate");}, 1000);
+                $('.tagify').removeClass("vibrate");
+            }, 1000);
             console.log("lol");
-        }else{
+        } else {
             let namesArray = JSON.parse(names);
-            var roulette = namesArray[Math.floor(Math.random()*namesArray.length)];
+            var roulette = namesArray[Math.floor(Math.random() * namesArray.length)];
             $("#modalBody").text(roulette["value"]);
             $('#resultView').fadeIn().css("display", "block");
         }
     });
 
-    $("#autoFill").on("click", function(){
-        
-        let autoFill =[
-            {"value":"Abdul Mannan"},
-            {"value":"Huzaif"},
-            {"value":"Ibrahim"},
-            {"value":"Ashish"},
-            {"value":"Yusuf"},
-            {"value":"Akash"},
-            {"value":"Abis"},
-            {"value":"Zaid"},
-            {"value":"Zayd"},
+    $("#autoFill").on("click", function () {
+
+        let autoFill = [
+            { "value": "Abdul Mannan" },
+            { "value": "Huzaif" },
+            { "value": "Ibrahim" },
+            { "value": "Ashish" },
+            { "value": "Yusuf" },
+            { "value": "Akash" },
+            { "value": "Abis" },
+            { "value": "Zaid" },
+            { "value": "Zayd" },
 
         ]
         $("#names").val(JSON.stringify(autoFill));
-        
-    }); 
 
-    window.onclick = function(event) {
-        if (event.target.id == "resultView" || event.target.id == "close" ) {
-          $("#resultView").css("display", "none");
+    });
+
+    window.onclick = function (event) {
+        if (event.target.id == "resultView" || event.target.id == "close") {
+            $("#resultView").css("display", "none");
         }
-      } 
+    }
 });
